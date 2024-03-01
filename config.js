@@ -6,6 +6,7 @@ const PORT = 3069;
 const SEND_WEBHOOKS = true;
 const WEBHOOK_IMAGE = `https://avatars.githubusercontent.com/u/9919?s=280&v=4`;
 const WEBHOOK_USERNAME = 'Github Gilroy';
+const LOCATION = 'BOX';
 
 const {
     DISCORD_WEBHOOK,
@@ -28,6 +29,7 @@ export {
     WEBHOOK_IMAGE,
     DISCORD_WEBHOOK,
     WEBHOOK_USERNAME,
+    LOCATION,
 
     GIT_DEV_DIR,
     GIT_MAIN_DIR,

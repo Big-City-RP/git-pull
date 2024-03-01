@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { branchFromRef, getCommitId } from './git.js';
-import { SEND_WEBHOOKS, WEBHOOK_IMAGE, DISCORD_WEBHOOK, WEBHOOK_USERNAME } from '../config.js';
+import { SEND_WEBHOOKS, WEBHOOK_IMAGE, DISCORD_WEBHOOK, WEBHOOK_USERNAME, LOCATION } from '../config.js';
 import { log } from './utils.js';
 
 async function sendPulledWebhook(data) {
@@ -10,7 +10,7 @@ async function sendPulledWebhook(data) {
         const commitLength = commits.length;
 
         let description = `**[[${repository.name}] ${commitLength} new commit${commitLength > 1 ? 's' : ''
-            } pulled to \`${branchFromRef(ref)}\`](${compare})**\n\n`;
+            } pulled to \`${LOCATION}\` / \`${branchFromRef(ref)}\`](${compare})**\n\n`;
         commits.forEach((commit) => description += 
             `[\`${getCommitId(commit)}\`](${commit.url}) ${commit.message.substr(0, commit.message.indexOf('\n') > 0 ? commit.message.indexOf('\n') : commit.message.length)} - ${commit.author.name}\n`);
 
