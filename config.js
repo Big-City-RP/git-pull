@@ -9,6 +9,7 @@ const WEBHOOK_USERNAME = 'Github Gilroy';
 const LOCATION = 'BOX';
 
 const {
+    WEBHOOK_SECRET,
     DISCORD_WEBHOOK,
     GIT_DEV_DIR,
     GIT_MAIN_DIR,
@@ -23,6 +24,7 @@ const {
 } = process.env;
 
 export {
+    WEBHOOK_SECRET,
     LOG_LEVEL,
     PORT,
     SEND_WEBHOOKS,
