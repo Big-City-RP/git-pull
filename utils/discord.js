@@ -5,7 +5,7 @@ import { log } from './utils.js';
 
 async function sendPulledWebhook(data) {
     try {
-        if (!SEND_WEBHOOKS) throw log(2, 'Webhooks are disabled');
+        if (!SEND_WEBHOOKS) return log(2, 'Webhooks are disabled');
         const { ref, commits, sender, repository, compare } = data;
         const commitLength = commits.length;
 
