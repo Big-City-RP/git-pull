@@ -31,7 +31,7 @@ const repos = {
     'bcrp-panel': {
         main: simpleGit({ ...options, baseDir: GIT_PANEL_DIR }),
     },
-    'bcrp-bot': {
+    'gilroyv4': {
         main: simpleGit({ ...options, baseDir: GIT_BOT_DIR }),
     },
 };
